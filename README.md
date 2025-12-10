@@ -1,68 +1,73 @@
 Alumno: Koller Tomas, a2011
 
-Este repositorio contiene los cuatro desafíos prácticos realizados durante la materia Procesamiento de Lenguaje Natural. Cada notebook aborda un conjunto de técnicas fundamentales del PLN, con el objetivo de aplicar conceptos teóricos, analizar resultados y reflexionar sobre el comportamiento de los modelos.
+Este repositorio reúne los cuatro desafíos prácticos desarrollados durante la cursada de Procesamiento de Lenguaje Natural (PLN). Cada notebook introduce y pone en práctica distintos métodos esenciales del área, con la intención de aplicar teoría, analizar comportamientos y obtener una comprensión más profunda del funcionamiento real de los modelos.
 
-A lo largo de estos trabajos se exploraron métodos clásicos de representación, modelos probabilísticos, embeddings, modelos basados en redes neuronales recurrentes y sistemas seq2seq para traducción automática. El foco estuvo siempre en experimentar, interpretar resultados, comparar estrategias y entender las limitaciones reales de cada enfoque.
+A lo largo de los trabajos se investigaron enfoques clásicos de representación, modelos probabilísticos, embeddings distribucionales, arquitecturas basadas en redes neuronales recurrentes y sistemas seq2seq orientados a tareas de traducción automática. El eje principal fue siempre experimentar, interpretar resultados, comparar alternativas y evaluar las limitaciones de cada técnica.
 
-Desafío 1 — Representación vectorial clásica y clasificación
-En este primer desafío se trabajó con vectorización de texto, mediciones de similaridad y modelos de clasificación basados en representaciones simples.
+Desafío 1 — Representación vectorial tradicional y clasificación
 
-Temas abordados
+En este primer desafío se exploraron técnicas básicas de vectorización y modelos simples de clasificación, junto con el análisis de similaridad entre documentos.
 
-TF-IDF / Bag of Words: vectorización de documentos.
+Contenido trabajado:
 
-Cálculo de similaridad (coseno) entre documentos.
+Representación de texto mediante TF-IDF y Bag of Words.
 
-Análisis manual de si la similaridad tiene sentido semántico y coincide con etiquetas.
+Cálculo de similaridad coseno entre pares de documentos.
 
-Clasificación por prototipos: asignar la clase del documento más similar.
+Evaluación manual de si la similaridad refleja relaciones semánticas reales.
 
-Modelos Naïve Bayes (Multinomial y ComplementNB) ajustando hiperparámetros.
+Clasificación por prototipos asignando la categoría del documento más cercano.
 
-Transposición para obtener matriz término-documento y estudiar similaridad entre palabras.
+Modelos de Naïve Bayes (Multinomial y ComplementNB) y ajuste de hiperparámetros.
 
-Desafío 2 — Creación de embeddings con Gensim
-Este desafío introduce embeddings distribucionales entrenados desde cero usando Word2Vec (Gensim) sobre letras de canciones del dataset Songs.
+Construcción de la matriz término-documento para estudiar similaridades entre palabras.
 
-Temas abordados
+Desafío 2 — Entrenamiento de embeddings con Gensim
 
-Entrenamiento de modelos Skip-gram / CBOW.
+En este desafío se trabajó con modelos distribucionales entrenados desde cero, utilizando Word2Vec (Gensim) sobre letras de canciones del dataset Songs.
 
-Exploración de palabras más y menos similares a términos elegidos.
+Contenido trabajado:
 
-Reducción de dimensionalidad (PCA / TSNE / UMAP) a 2D.
+Entrenamiento de modelos Skip-gram y CBOW.
 
-Construcción de visualizaciones y detección de clusters semánticos.
+Inspección de palabras más y menos similares a términos específicos.
+
+Aplicación de técnicas de reducción de dimensionalidad (PCA, t-SNE, UMAP) para visualización en 2D.
+
+Detección de grupos semánticos mediante gráficos y análisis exploratorio.
 
 Desafío 3 — Modelos de Lenguaje con RNN, LSTM y GRU
-En este desafio se construyeron modelos de lenguaje entrenados desde cero, trabajando con corpus propio y probando distintas unidades recurrentes.
 
-Temas abordados
+Este desafío consistió en construir modelos de lenguaje desde cero utilizando diferentes tipos de unidades recurrentes.
 
-*Selección y tokenización de corpus.
+Contenido trabajado:
 
-Generación del dataset tipo “secuencia de entrada → siguiente token”.
+Selección del corpus y proceso de tokenización.
 
-Arquitecturas con SimpleRNN, LSTM y GRU.
+Generación del dataset en formato secuencia → token siguiente.
 
-Entrenamiento guiado por perplejidad.
+Diseño de modelos con SimpleRNN, LSTM y GRU.
+
+Entrenamiento supervisado mediante perplejidad.
 
 Generación de texto con:
 
-*Greedy search
+Greedy search
 
-*Beam search determinístico
+Beam search determinístico
 
-Beam search estocástico + temperatura
-Desafío 4 — Traducción automática con modelos seq2seq (PyTorch)
-El último desafío consistió en replicar y extender un modelo seq2seq para traducción, empleando embeddings y capas recurrentes en PyTorch.
+Beam search estocástico combinado con temperatura
 
-Temas abordados
+Desafío 4 — Traducción automática con modelos seq2seq en PyTorch
 
-Implementación desde cero de un modelo encoder-decoder.
+El último trabajo se enfocó en reproducir y mejorar un modelo encoder–decoder para realizar traducción automática, empleando embeddings y capas recurrentes implementadas en PyTorch.
 
-Extensión del dataset y aumento del largo de las sequencias.
+Contenido trabajado:
 
-Experimentos con distinta cantidad de neuronas en las capas recurrentes.
+Implementación completa de un modelo seq2seq desde cero.
 
-Generación y análisis de traducciones de ejemplo.
+Ampliación del conjunto de datos y manejo de secuencias más largas.
+
+Pruebas con distintas cantidades de neuronas en las capas recurrentes.
+
+Generación de traducciones de prueba y análisis cualitativo de sus resultados.
